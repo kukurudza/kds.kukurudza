@@ -1,0 +1,129 @@
+.blog {
+    @include xs-block() {
+        padding: 70px 0;
+    }
+    @include md-block() {
+        padding: 140px 0;
+    }
+    &__wrapper {
+        @include xs-block() {
+            @include wrapper();
+        }
+    }
+    &__title {
+        @include xs-block() {
+            font-size: 1.5rem;
+            color: $black;
+            text-transform: capitalize;
+            text-align: center;
+        }
+        @include md-block() {
+            font-size: 2.7rem;
+            margin: 0 0 20px;            
+        }
+        &--blue {
+            color: $aqua;
+        }
+        &--small {
+            @include xs-block() {
+                text-transform: capitalize;
+                font-size: 1.125rem;
+            }
+            @include md-block() {
+                font-size: 1.5rem;
+            }
+        }
+    }
+    &__subtitle {
+        @include xs-block() {
+            white-space: pre-wrap;
+            text-align: center;
+            line-height: 1.6;
+        }
+    }
+    &__inner {
+        @include xs-block() {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin: 38px 0 70px;
+        }
+        @include md-block() {
+            flex-wrap: nowrap;
+            margin: 76px 0 0;
+        }
+    }
+    &__item {
+        @include size-xs(11);
+        @include size-sm(7);
+        @include size-md(4);
+        @include size-lg(4);
+        @include xs-block() {
+            margin: 50px 15px 0;
+            box-shadow: 0px 30px 60px 0 rgba(0, 0, 0, 0.05);            
+            &:hover {
+                box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0.2);
+                .blog__title--small, .blog__more {
+                    color: $aqua;
+                }
+            }
+        }        
+    }
+    &__main {
+        @include xs-block() {
+            padding: 14px 20px; 
+        }
+        @include md-block() {
+            padding: 24px 20px;
+        }
+    }
+    &__details {
+        @include xs-block() {
+            display: flex;
+            flex-wrap: nowrap;
+            margin: 17px 0 13px;            
+            font-family: 'Poppins', sans-serif;
+        }        
+    }
+    &__author {
+        @include xs-block() {
+            text-transform: capitalize;
+        }
+        &--strong {
+            @include xs-block() {
+                font-weight: 700;
+            }
+        }
+    }
+    &__date {
+        @include xs-block() {
+            margin-left: 6px;
+        }
+    }
+    &__excerpt {
+        text-align: left;
+        line-height: 1.6;
+        margin: 0 0 16px;
+    }
+    &__more {
+        @include xs-block() {
+            font-family: "Poppins", sans-serif;
+            font-weight: 700;
+            text-decoration: none;
+            text-transform: capitalize;
+            color: $black;       
+            font-size: 0.75rem;
+            margin: auto 0;
+            &:hover {
+                color: $aqua;
+            }
+        }
+        @include md-block() {
+            font-size: 1rem;
+        }
+    }
+}
+// --------------------------------BLOG.HTML------------------------------------------
+@import '_blog-content';
+// --------------------------------SINGLE.HTML------------------------------------------
+@import '_blog-single';

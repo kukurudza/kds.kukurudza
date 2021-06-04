@@ -1,0 +1,201 @@
+.pricing {
+    @include xs-block() {
+        padding: 96px 0 55px;
+    }
+    @include lg-block() {
+        padding: 66px 0 110px;
+    }
+    &__wrapper {
+        @include wrapper();
+    }
+    &__title {
+        @include xs-block() {
+            font-size: 1.5rem;
+            color: $black;
+            text-transform: capitalize;
+            text-align: center;
+        }
+        @include md-block() {
+            font-size: 2.7rem;
+            margin: 0 0 30px;            
+        }
+        &--blue {
+            color: $aqua;
+        }
+        &--small {
+            @include xs-block() {
+                text-transform: capitalize;
+                font-size: 1.125rem;
+                margin: 0 0 16px;
+            }
+            @include md-block() {
+                font-size: 1.5rem;
+                margin: 0 0 32px;
+            }
+        }
+    }
+    &__subtitle {
+        @include xs-block() {            
+            text-align: center;
+            margin: 20px 0 18px;
+        }
+        @include md-block() {           
+            white-space: pre-wrap;
+            margin: 30px 0 36px;
+        }
+    }
+    &__buttons {
+        @include size-xs(8);
+        @include size-sm(8);
+        @include size-md(4);
+        @include size-lg(4);
+        @include xs-block() {
+            display: flex;
+            justify-content: center;
+            max-width: 280px;
+            margin: 0 auto;
+        }
+        @include md-block() {
+            max-width: 370px;
+        }
+    }
+    &__button {
+        @include xs-block() {
+            font-family: 'Poppins', sans-serif;
+            font-size: 0.75rem;
+            text-align: center;
+            text-transform: uppercase;
+            color: $grey;
+            padding: 12px 24px;
+            background: $white;
+            border: none;
+            border-radius: 2rem 0 0 2rem;           
+            &:nth-child(2) {
+                border-radius: 0 2rem 2rem 0;
+            }
+            &:hover {
+                color: $aqua;                
+                cursor: pointer;
+                border: 1px solid $aqua;
+                &.active {
+                    border: none;
+                }
+            }           
+            &:not(.active) {
+                background: $white;
+                box-shadow: 0px 30px 60px 0 rgba(0, 0, 0, 0.05);            
+            }
+            &.active {
+                background: $green;
+                box-shadow: none;
+                color: $white;
+            }
+        }
+        @include md-block() {
+            font-size: 1rem;
+            padding: 16px 48px;
+        }
+    }
+    &__inner {
+        @include xs-block() {
+            display: none;
+            &.active {
+                display: flex;
+                justify-content: space-between;
+                flex-wrap: wrap;
+            }
+        }
+        @include md-block() {
+            &.active {
+                flex-wrap: nowrap;
+            }
+            
+        }
+    }
+    &__item {
+        @include size-xs(8);
+        @include size-sm(5);
+        @include size-md(4);        
+        @include xs-block() {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            margin: 40px auto 0; 
+            padding: 39px 46px 37px;
+            box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0.2);
+            &:hover {
+                box-shadow: 0px 30px 60px 0 rgba(0, 0, 0, 0.05);
+                .pricing__btn {
+                    background: $green;
+                }
+                .pricing__price {
+                    color: $green;
+                }
+            }
+        }
+        @include sm-block() {
+            p {
+                font-size: 1rem;
+            }
+        }
+        @include md-block() {
+            box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0.2);
+            margin: 80px 30px 0;
+            padding: 78px 46px 74px;            
+        }
+        @include lg-block() {
+            padding: 78px 82px 74px;
+        }
+    }
+    &__price {
+        @include xs-block() {
+            font-size: 2rem;
+            color: $aqua;
+        }
+        @include md-block() {
+            font-size: 3.75rem;
+        }
+    }
+    &__duration {
+        @include xs-block() {
+            margin: 0 0 30px;
+        }     
+    }
+    &__text {
+        @include xs-block() {
+            margin: 20px 0 0;
+        }
+        @include md-block() {
+            margin: 30px 0 0;
+        }
+    }
+    &__btn {
+        @include xs-block() {
+            position: absolute;
+            left: 0; 
+            right: 0;
+            bottom: -5%;
+            font-size: 0.75rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            text-align: center;
+            color: $white;
+            padding: 12px 16px;
+            background: $aqua;
+            border: none;
+            border-radius: 30px;
+            box-shadow: 0px 30px 60px 0 rgba(0, 0, 0, 0.05);
+            margin: auto;
+            &:hover {
+                background: $green;
+                cursor: pointer;
+            }
+        }        
+        @include md-block() {
+            padding: 24px 32px;           
+            font-size: 1rem;
+        }       
+    }
+}

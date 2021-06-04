@@ -1,0 +1,97 @@
+@import '_smart-grid';
+@include reset();
+//----------------------------COLORS-----------------------------------------
+$green: #24c657;
+$aqua: #00cff1;
+$pink: #ff45c4;
+$orange: #ff9d46;
+$violet: #35203b;
+$grey: #575757;
+$black: #282828;
+$white: #fefefe;
+$yellow: #eec400;
+
+@mixin font($color) {
+    font-family: 'Raleway', sans-serif;
+    color: $color;
+}
+
+body {
+    min-width: 320px;
+    overflow-x: hidden;
+}
+h1,h2,h3,h4,h5,h6{
+    font-family: 'Raleway';    
+    font-weight: 700;    
+}
+p {
+    @include font($grey);    
+    @include xs-block() {
+        font-size: 0.75rem;
+    }
+    @include md-block() {
+        font-size: 1rem;
+    }
+}
+@mixin bullets {    
+    .slick-dots {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        button {
+            display: block;
+            width: 22px;
+            height: 7px;
+            border-radius: 3.5px;
+            background: #ebe9ff;
+            margin: 0 5px;
+            font-size: 0;
+            border: none;
+            transition: width 0.3s;
+            @include sm-block() {
+                width: 30px;
+                margin: 0 10px;
+            }
+            @include md-block() {
+                width: 45px;
+                margin: 0 15px;
+            }
+        }   
+    }
+    li.slick-active button {
+        background-color: $aqua;
+        width: 33px;
+        @include sm-block(){
+            width: 45px;
+        }
+        @include md-block(){
+            width: 60px;
+        }
+    }
+}
+.button-top {
+    @include xs-block() {
+        position: fixed;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        bottom: 140px;
+        right: 8px;
+        z-index: 100;
+        width: 51px;
+        height: 51px;
+        border-radius: 50%;
+        background: $aqua;
+        font-size: 1.5rem;
+        color: $white;
+        text-decoration: none;
+        &:hover {
+            text-decoration: none;
+            color: $white;
+            cursor: pointer;
+        }
+    }
+    @include lg-block() {
+        right: 50px;
+    }
+}

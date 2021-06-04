@@ -1,0 +1,162 @@
+.footer {
+    @include xs-block() {
+        background-color: #fbfbfb;
+    }
+    &__wrapper {
+        @include wrapper();        
+    }
+    &__inner {
+        @include xs-block() {
+            display: flex;
+            flex-wrap: wrap;
+            padding-top: 70px;
+            padding-bottom: 70px;            
+        }        
+        @include md-block() {
+            justify-content: space-between;
+            flex-wrap: nowrap;
+            padding-top: 140px;
+            padding-bottom: 140px;
+        }
+    }
+    &__item {
+        @include size-xs(12);
+        @include size-sm(12);
+        @include size-md(4);
+        @include size-lg(4);
+        @include xs-block() {
+            margin: 40px 0 35px;
+        }
+        @include md-block() {
+            margin: 0;
+        }
+        &--small {            
+            @include size-md(2);
+            @include size-lg(2);
+            @include xs-block() {
+                display: none;
+            }
+            @include md-block() {
+                display: block;
+            }
+        }
+    }
+    &__text {
+        @include xs-block() {
+            margin: 29px 0 17px;
+        }  
+        @include md-block() {
+            margin: 59px 0 35px;
+        } 
+    }
+    &__title {
+        @include xs-block() {
+            font-size: 1rem;
+            text-transform: capitalize;
+            margin: 0 0 27px;
+        }
+        @include md-block() {
+            font-size: 1.5rem;
+            margin: 0 0 54px;
+        }
+        &--social {
+            @include xs-block() {
+                font-size: 1rem;
+                text-transform: capitalize;
+                margin: 0 0 10px;
+            }
+            @include md-block() {
+                font-size: 1.5rem;
+                margin: 0 0 19px;
+            }
+        }
+    }
+    &__social {
+        display: flex;
+    }
+    &__list {
+        li {
+            @include md-block() {
+                margin: 10px 0 0;
+            }
+        }
+    }
+    &__link {        
+        @include md-block() {
+            font-family: 'Raleway';            
+            text-decoration: none;
+            text-transform: capitalize;
+            color: $grey;
+        }
+        &--social {
+            @include xs-block() {
+                text-decoration: none;
+                color: $black;
+                margin: 0 7px 0;
+                font-size: 0.75rem;
+                &:hover {
+                    color: $aqua;
+                }                
+            }
+            @include md-block() {
+                font-size: 1rem;
+                margin: 0 10px 0;
+            }
+        }
+    }
+    &__form {
+        display: flex;
+        width: 100%;
+        height: 60px;
+    }
+    &__input {
+        @include xs-block() {
+            color: $grey;
+            font-size: 0.75rem;
+            border-radius: 2rem 0 0 2rem;
+            padding: 10px 13px;
+            border: 1px solid #d8d8d8;
+            width: 70%;            
+        }
+        @include md-block() {
+            font-size: 1rem;
+            padding: 20px 26px;
+        }
+    }
+    &__submit {
+        @include xs-block() {
+            text-align: center;
+            font-size: 1.25rem;
+            color: $white;
+            padding: 10px 17px;
+            border-radius: 0 2rem 2rem 0;
+            background: $green;
+            border: none;
+            width: 30%;
+            &:hover {
+                cursor: pointer;
+            }
+        }
+        @include md-block() {
+            padding: 20px 35px;
+        }
+    }
+    &__bottom {
+        @include xs-block() {
+            background: $green;
+            text-align: center;
+            padding: 16px 0;
+            color: $white;
+        }
+    }
+    &__copyright {
+        @include xs-block() {
+            font-family: 'Poppins', sans-serif;
+            color: $white;
+            text-transform: capitalize;
+            &--strong {
+                font-weight: 700;
+            }
+        }   
+    }
+}
