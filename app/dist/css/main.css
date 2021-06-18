@@ -143,6 +143,8 @@ p {
     .header__logo a {
       color: inherit;
       text-decoration: none; }
+    .header__logo h1 {
+      font-size: inherit; }
   .header__nav {
     justify-self: end; }
   @media screen and (min-width: 320px) {
