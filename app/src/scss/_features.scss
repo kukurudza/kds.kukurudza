@@ -90,8 +90,7 @@
             text-align: center;
         }        
         @include md-block() {
-            font-size: 2rem;
-            // white-space: normal;
+            font-size: 2rem;            
             text-align: left;
         }
         &--blue {
@@ -164,7 +163,7 @@
                 a {
                     color: $white;
                 }
-            }
+            }                        
             a {
                 @include font(inherit);                
                 text-decoration: none;

@@ -37,11 +37,12 @@ gulp.task('sass', function(){
 });
 //-----------------Docs files----------------------------------
 gulp.task('docs', function(){
-    return gulp.src('app/dist/**/*.*')
-    .pipe(gulp.dest('docs'))
+    return gulp.watch('app/dist/*').on('change', function(){
+        gulp.dest('docs')
+    });    
 });
 
 gulp.task('default', gulp.series('sass', 'browser-sync', 'autoprefixer', 'docs', function(done){
-    gulp.watch('app/src/scss/*.*', gulp.series('sass'));
+    gulp.watch('app/src/scss/*.*', gulp.series('sass'));    
     done()
 }));

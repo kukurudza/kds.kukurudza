@@ -606,16 +606,15 @@ p {
 
 @media screen and (min-width: 320px) {
   .features__title {
-    font-size: 2rem;
+    font-size: 1.5rem;
     color: #282828;
-    text-transform: capitalize;
-    white-space: nowrap;
+    white-space: normal;
     margin: auto;
     text-align: center; } }
 
 @media screen and (min-width: 1024px) {
   .features__title {
-    white-space: normal;
+    font-size: 2rem;
     text-align: left; } }
 
 .features__title--blue {
@@ -624,14 +623,16 @@ p {
 @media screen and (min-width: 320px) {
   .features__title--small {
     margin: 20px 0 0;
-    text-transform: capitalize;
+    text-transform: uppercase;
     font-size: 1.125rem; } }
 
 @media screen and (min-width: 320px) {
   .features__subtitle {
     margin: 20px 0 0;
     line-height: 1.6;
-    text-align: center; } }
+    text-align: center; }
+    .features__subtitle--blue {
+      color: #00cff1; } }
 
 @media screen and (min-width: 1024px) {
   .features__subtitle {
@@ -662,6 +663,31 @@ p {
   .features__item {
     text-align: left;
     margin: 77px 0 0; } }
+
+@media screen and (min-width: 320px) {
+  .features__button {
+    display: block;
+    margin: 30px auto 0;
+    border: 1px solid #00cff1;
+    background: transparent;
+    border-radius: 10px;
+    padding: 10px;
+    max-height: 60px;
+    font-size: 1rem;
+    text-align: left;
+    color: #fefefe;
+    max-width: 190px;
+    color: #00cff1; }
+    .features__button:hover {
+      cursor: pointer;
+      background: #24c657;
+      border-color: #24c657; }
+      .features__button:hover a {
+        color: #fefefe; }
+    .features__button a {
+      font-family: 'Raleway', sans-serif;
+      color: inherit;
+      text-decoration: none; } }
 
 @media screen and (min-width: 320px) {
   .screenshot {
