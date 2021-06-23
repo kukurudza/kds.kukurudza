@@ -35,8 +35,13 @@ gulp.task('sass', function(){
     .pipe(autoprefixer())
     .pipe(browserSync.reload({stream: true}));
 });
+//-----------------Docs files----------------------------------
+gulp.task('docs', function(){
+    return gulp.src('app/dist/**/*.*')
+    .pipe(gulp.dest('docs'))
+});
 
-gulp.task('default', gulp.series('sass', 'browser-sync', 'autoprefixer', function(done){
+gulp.task('default', gulp.series('sass', 'browser-sync', 'autoprefixer', 'docs', function(done){
     gulp.watch('app/src/scss/*.*', gulp.series('sass'));
     done()
 }));
