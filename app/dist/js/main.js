@@ -7,23 +7,7 @@ $(document).ready(function() {
         $(".burger").toggleClass("active");
         $(".header__menu").toggleClass("active");
     });  
-  });
-  // ------------------------------------TAB'S----------------------------
-  (function($) {
-    $(function() {
-      $(".pricing__buttons").on("click", ".pricing__button:not(.active)", function() {
-        $(this)
-          .addClass("active")
-          .siblings()
-          .removeClass("active")
-          .closest(".pricing__wrapper")
-          .find(".pricing__inner")
-          .removeClass("active")
-          .eq($(this).index())
-          .addClass("active");
-      });
-    });
-  })(jQuery);
+  });  
 //---------------------------------SLIDER'S----------------------------
 (function($){
   $('.screenshot__slider').slick({

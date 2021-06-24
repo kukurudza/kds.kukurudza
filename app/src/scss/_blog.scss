@@ -45,12 +45,10 @@
         @include xs-block() {
             display: flex;
             flex-wrap: wrap;
-            justify-content: center;
-            margin: 38px 0 70px;
+            justify-content: center;            
         }
         @include md-block() {
-            flex-wrap: nowrap;
-            margin: 76px 0 0;
+            flex-wrap: nowrap;            
         }
     }
     &__item {

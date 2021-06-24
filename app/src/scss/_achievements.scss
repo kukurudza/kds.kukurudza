@@ -45,7 +45,7 @@
                 height: 160%;
                 border: 1px dashed $white;
                 border-radius: 10px;
-                transform: rotate(-36deg);
+                // transform: rotate(-36deg);
             }            
             &:nth-child(1) {
                 &::after {
@@ -56,9 +56,14 @@
         @include md-block() {
             &::before {                
                 width: 172px;                
-                transform: rotate(-30deg);
+                // transform: rotate(-30deg);
             }
         }        
+    }
+    &__icon {
+        @include xs-block() {
+            font-size: 5rem;
+        }
     }
     &__count {        
         @include md-block() {

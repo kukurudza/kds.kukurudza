@@ -369,7 +369,6 @@ p {
         height: 596px;
         z-index: 1;
         transform: rotate(-30deg);
-        -webkit-clip-path: polygon(0 86%, 53.5% 40%, 100% 0, 0 0);
         clip-path: polygon(0 86%, 53.5% 40%, 100% 0, 0 0);
         overflow: hidden; } }
   @media screen and (min-width: 1100px) {
@@ -831,15 +830,17 @@ p {
       width: 135px;
       height: 160%;
       border: 1px dashed #fefefe;
-      border-radius: 10px;
-      transform: rotate(-36deg); }
+      border-radius: 10px; }
     .achievements__item:nth-child(1)::after {
       display: none; } }
 
 @media screen and (min-width: 1024px) {
   .achievements__item::before {
-    width: 172px;
-    transform: rotate(-30deg); } }
+    width: 172px; } }
+
+@media screen and (min-width: 320px) {
+  .achievements__icon {
+    font-size: 5rem; } }
 
 @media screen and (min-width: 1024px) {
   .achievements__count {
@@ -1002,219 +1003,68 @@ p {
       width: 60px; } }
 
 @media screen and (min-width: 320px) {
-  .pricing {
+  .faq {
     padding: 96px 0 55px; } }
 
 @media screen and (min-width: 1100px) {
-  .pricing {
+  .faq {
     padding: 66px 0 110px; } }
 
-.pricing__wrapper {
+.faq__wrapper {
   max-width: 1200px;
   margin: 0 auto;
   padding-left: 30px;
   padding-right: 30px; }
   @media screen and (min-width: 768px) {
-    .pricing__wrapper {
+    .faq__wrapper {
       padding-left: 15px;
       padding-right: 15px; } }
 
 @media screen and (min-width: 320px) {
-  .pricing__title {
+  .faq__title {
     font-size: 1.5rem;
     color: #282828;
     text-transform: capitalize;
     text-align: center; } }
 
 @media screen and (min-width: 1024px) {
-  .pricing__title {
+  .faq__title {
     font-size: 2.7rem;
     margin: 0 0 30px; } }
 
-.pricing__title--blue {
+.faq__title--blue {
   color: #00cff1; }
 
 @media screen and (min-width: 320px) {
-  .pricing__title--small {
+  .faq__title--small {
     text-transform: capitalize;
     font-size: 1.125rem;
     margin: 0 0 16px; } }
 
 @media screen and (min-width: 1024px) {
-  .pricing__title--small {
+  .faq__title--small {
     font-size: 1.5rem;
     margin: 0 0 32px; } }
 
 @media screen and (min-width: 320px) {
-  .pricing__subtitle {
-    text-align: center;
-    margin: 20px 0 18px; } }
-
-@media screen and (min-width: 1024px) {
-  .pricing__subtitle {
-    white-space: pre-wrap;
-    margin: 30px 0 36px; } }
-
-@media screen and (min-width: 320px) {
-  .pricing__buttons {
-    width: calc(66.66667% - 30px); } }
-
-@media screen and (min-width: 768px) {
-  .pricing__buttons {
-    width: calc(66.66667% - 30px); } }
-
-@media screen and (min-width: 1024px) {
-  .pricing__buttons {
-    width: calc(33.33333% - 30px); } }
-
-@media screen and (min-width: 1100px) {
-  .pricing__buttons {
-    width: calc(33.33333% - 30px); } }
-
-@media screen and (min-width: 320px) {
-  .pricing__buttons {
-    display: flex;
-    justify-content: center;
-    max-width: 280px;
-    margin: 0 auto; } }
-
-@media screen and (min-width: 1024px) {
-  .pricing__buttons {
-    max-width: 370px; } }
-
-@media screen and (min-width: 320px) {
-  .pricing__button {
-    font-family: 'Poppins', sans-serif;
-    font-size: 0.75rem;
-    text-align: center;
-    text-transform: uppercase;
-    color: #575757;
-    padding: 12px 24px;
-    background: #fefefe;
-    border: none;
-    border-radius: 2rem 0 0 2rem; }
-    .pricing__button:nth-child(2) {
-      border-radius: 0 2rem 2rem 0; }
-    .pricing__button:hover {
-      color: #00cff1;
-      cursor: pointer;
-      border: 1px solid #00cff1; }
-      .pricing__button:hover.active {
-        border: none; }
-    .pricing__button:not(.active) {
-      background: #fefefe;
-      box-shadow: 0px 30px 60px 0 rgba(0, 0, 0, 0.05); }
-    .pricing__button.active {
-      background: #24c657;
-      box-shadow: none;
-      color: #fefefe; } }
-
-@media screen and (min-width: 1024px) {
-  .pricing__button {
-    font-size: 1rem;
-    padding: 16px 48px; } }
-
-@media screen and (min-width: 320px) {
-  .pricing__inner {
+  .faq__inner {
     display: none; }
-    .pricing__inner.active {
+    .faq__inner.active {
       display: flex;
       justify-content: space-between;
       flex-wrap: wrap; } }
 
 @media screen and (min-width: 1024px) {
-  .pricing__inner.active {
+  .faq__inner.active {
     flex-wrap: nowrap; } }
 
 @media screen and (min-width: 320px) {
-  .pricing__item {
-    width: calc(66.66667% - 30px); } }
-
-@media screen and (min-width: 768px) {
-  .pricing__item {
-    width: calc(41.66667% - 30px); } }
-
-@media screen and (min-width: 1024px) {
-  .pricing__item {
-    width: calc(33.33333% - 30px); } }
-
-@media screen and (min-width: 320px) {
-  .pricing__item {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    position: relative;
-    margin: 40px auto 0;
-    padding: 39px 46px 37px;
-    box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0.2); }
-    .pricing__item:hover {
-      box-shadow: 0px 30px 60px 0 rgba(0, 0, 0, 0.05); }
-      .pricing__item:hover .pricing__btn {
-        background: #24c657; }
-      .pricing__item:hover .pricing__price {
-        color: #24c657; } }
-
-@media screen and (min-width: 768px) {
-  .pricing__item p {
-    font-size: 1rem; } }
-
-@media screen and (min-width: 1024px) {
-  .pricing__item {
-    box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0.2);
-    margin: 80px 30px 0;
-    padding: 78px 46px 74px; } }
-
-@media screen and (min-width: 1100px) {
-  .pricing__item {
-    padding: 78px 82px 74px; } }
-
-@media screen and (min-width: 320px) {
-  .pricing__price {
-    font-size: 2rem;
-    color: #00cff1; } }
-
-@media screen and (min-width: 1024px) {
-  .pricing__price {
-    font-size: 3.75rem; } }
-
-@media screen and (min-width: 320px) {
-  .pricing__duration {
-    margin: 0 0 30px; } }
-
-@media screen and (min-width: 320px) {
-  .pricing__text {
+  .faq__text {
     margin: 20px 0 0; } }
 
 @media screen and (min-width: 1024px) {
-  .pricing__text {
+  .faq__text {
     margin: 30px 0 0; } }
-
-@media screen and (min-width: 320px) {
-  .pricing__btn {
-    position: absolute;
-    left: 0;
-    right: 0;
-    bottom: -5%;
-    font-size: 0.75rem;
-    font-weight: 600;
-    text-transform: uppercase;
-    text-align: center;
-    color: #fefefe;
-    padding: 12px 16px;
-    background: #00cff1;
-    border: none;
-    border-radius: 30px;
-    box-shadow: 0px 30px 60px 0 rgba(0, 0, 0, 0.05);
-    margin: auto; }
-    .pricing__btn:hover {
-      background: #24c657;
-      cursor: pointer; } }
-
-@media screen and (min-width: 1024px) {
-  .pricing__btn {
-    padding: 24px 32px;
-    font-size: 1rem; } }
 
 @media screen and (min-width: 320px) {
   .download {
@@ -1522,13 +1372,11 @@ p {
   .blog__inner {
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
-    margin: 38px 0 70px; } }
+    justify-content: center; } }
 
 @media screen and (min-width: 1024px) {
   .blog__inner {
-    flex-wrap: nowrap;
-    margin: 76px 0 0; } }
+    flex-wrap: nowrap; } }
 
 @media screen and (min-width: 320px) {
   .blog__item {
