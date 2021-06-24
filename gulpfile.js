@@ -5,6 +5,8 @@ const sass = require('gulp-sass');
 const browserSync = require('browser-sync').create();
 const autoprefixer = require('gulp-autoprefixer');
 const { prependListener } = require('gulp');
+const {src, task}= require('gulp');
+const ghPages = require('gulp-gh-pages');
 
 sass.compiler = require('node-sass');
 // ---------------BrowserSync------------------------------
@@ -35,14 +37,14 @@ gulp.task('sass', function(){
     .pipe(autoprefixer())
     .pipe(browserSync.reload({stream: true}));
 });
-//-----------------Docs files----------------------------------
-gulp.task('docs', function(){
-    return gulp.watch('app/dist/*').on('change', function(){
-        gulp.dest('docs')
-    });    
-});
+//-----------------GitHub Pages----------------------------------
+gulp.task('deploy', function(done){
+    src('app/dist/**')
+    .pipe(ghPages())
+    done()
+})
 
-gulp.task('default', gulp.series('sass', 'browser-sync', 'autoprefixer', 'docs', function(done){
+gulp.task('default', gulp.series('sass', 'browser-sync', 'autoprefixer', function(done){
     gulp.watch('app/src/scss/*.*', gulp.series('sass'));    
     done()
 }));

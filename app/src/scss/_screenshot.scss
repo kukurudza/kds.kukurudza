@@ -11,8 +11,7 @@
     &__title {
         @include xs-block() {
             font-size: 1.5rem;
-            color: $black;
-            text-transform: capitalize;
+            color: $black;            
             text-align: center;
         }        
         @include md-block() {
