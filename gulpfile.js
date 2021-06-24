@@ -39,8 +39,9 @@ gulp.task('sass', function(){
 });
 //-----------------GitHub Pages----------------------------------
 gulp.task('deploy', function(done){
-    src('app/dist/**')
+     gulp.src('app/dist/**')
     .pipe(ghPages())
+    .pipe(gulp.dest('docs/'))
     done()
 })
 

@@ -711,7 +711,6 @@ p {
   .screenshot__title {
     font-size: 1.5rem;
     color: #282828;
-    text-transform: capitalize;
     text-align: center; } }
 
 @media screen and (min-width: 1024px) {
