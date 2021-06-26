@@ -84,7 +84,7 @@
     &__title {
         @include xs-block() {
             font-size: 1.5rem;
-            color: $black;            
+            color: color(black);            
             white-space: normal;
             margin: auto;
             text-align: center;
@@ -94,7 +94,7 @@
             text-align: left;
         }
         &--blue {
-            color: $aqua;
+            color: color(aqua);
         }
         &--small {
           @include xs-block() {
@@ -111,7 +111,7 @@
             text-align: center;
 
             &--blue {
-                color: $aqua;
+                color: color(aqua);
             }
         }        
         @include md-block() {
@@ -146,22 +146,22 @@
         @include xs-block {
             display: block;
             margin: 30px auto 0;
-            border: 1px solid $aqua;
+            border: 1px solid color(aqua);
             background: transparent;            
             border-radius: 10px;            
             padding: 10px;
             max-height: 60px;
             font-size: 1rem;
             text-align: left;
-            color: $white;
+            color: color(white);
             max-width: 190px;
-            color: $aqua;            
+            color: color(aqua);            
             &:hover {
                 cursor: pointer;
-                background: $green;
-                border-color: $green;
+                background: color(green);
+                border-color: color(green);
                 a {
-                    color: $white;
+                    color: color(white);
                 }
             }                        
             a {

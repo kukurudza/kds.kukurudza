@@ -11,14 +11,14 @@
     &__title {
         @include xs-block() {
             font-size: 1.5rem;
-            color: $black;            
+            color: color(black);            
             text-align: center;
         }        
         @include md-block() {
             font-size: 2.7rem;
         }
         &--blue {
-            color: $aqua;
+            color: color(aqua);
         }        
     }
     &__subtitle {
