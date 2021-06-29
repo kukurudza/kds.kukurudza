@@ -13,7 +13,7 @@
     &__title {
         @include xs-block() {
             font-size: 1.5rem;
-            color: $black;
+            color: color(black);
             text-transform: capitalize;
             text-align: center;
         }
@@ -22,7 +22,7 @@
             margin: 0 0 20px;            
         }
         &--blue {
-            color: $aqua;
+            color: color(aqua);
         }
         &--small {
             @include xs-block() {
@@ -62,7 +62,7 @@
             &:hover {
                 box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0.2);
                 .blog__title--small, .blog__more {
-                    color: $aqua;
+                    color: color(aqua);
                 }
             }
         }        
@@ -109,11 +109,11 @@
             font-weight: 700;
             text-decoration: none;
             text-transform: capitalize;
-            color: $black;       
+            color: color(black);       
             font-size: 0.75rem;
             margin: auto 0;
             &:hover {
-                color: $aqua;
+                color: color(aqua);
             }
         }
         @include md-block() {

@@ -8,7 +8,7 @@
         width: 100%;
         height: 100%;
         z-index: 1;
-        background-color: transparentize($green, 0.1);
+        background-color: transparentize(color(green), 0.1);
        }
     }
     @include md-block() {
@@ -36,14 +36,14 @@
             justify-content: center;
             align-items: center;
             text-align: center;
-            color: $white;
+            color: color(white);
             margin: 90px 0;
             &::before {
                 content: '';
                 position: absolute;
                 width: 135px;
                 height: 160%;
-                border: 1px dashed $white;
+                border: 1px dashed color(white);
                 border-radius: 10px;
                 // transform: rotate(-36deg);
             }            
@@ -72,7 +72,7 @@
     }
     &__text {
         @include xs-block() {
-            color: $white;
+            color: color(white);
         }        
     }
 }

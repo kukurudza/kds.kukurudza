@@ -11,7 +11,7 @@
     &__title {
         @include xs-block() {
             font-size: 1.5rem;
-            color: $black;
+            color: color(black);
             text-transform: capitalize;
             text-align: center;
         }
@@ -20,7 +20,7 @@
             margin: 0 0 30px;            
         }
         &--blue {
-            color: $aqua;
+            color: color(aqua);
         }
         &--small {
             @include xs-block() {
@@ -35,18 +35,10 @@
         }
     }
     &__inner {
-        @include xs-block() {
-            display: none;
-            &.active {
-                display: flex;
-                justify-content: space-between;
-                flex-wrap: wrap;
-            }
+        @include xs-block() {            
+            
         }
-        @include md-block() {
-            &.active {
-                flex-wrap: nowrap;
-            }
+        @include md-block() {            
             
         }
     } 

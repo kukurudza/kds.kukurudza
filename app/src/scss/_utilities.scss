@@ -1,31 +1,43 @@
 @import '_smart-grid';
 @include reset();
 //----------------------------COLORS-----------------------------------------
-$green: #24c657;
-$aqua: #00cff1;
-$pink: #ff45c4;
-$orange: #ff9d46;
-$violet: #35203b;
-$grey: #575757;
-$black: #282828;
-$white: #fefefe;
-$yellow: #eec400;
+$colors: (
+    green: #24c657,
+    aqua: #00cff1,
+    pink: #ff45c4,
+    orange: #ff9d46,
+    violet: #35203b,
+    grey: #575757,
+    black: #282828,
+    white: #fefefe,
+    yellow: #eec400,
+    inherit: inherit,
+);
+
+@function color($key) {
+    @if map-has-key($colors, $key) {
+      @return map-get($colors, $key);
+    } @else {
+        @warn "Unknown `#{$key}` in $colors.";
+        @return null;
+    }
+  }
 
 @mixin font($color) {
-    font-family: 'Raleway', sans-serif;
-    color: $color;
+    font-family: 'Raleway', sans-serif;    
+    color: color($color);
 }
 
 body {
     min-width: 320px;
     overflow-x: hidden;
 }
-h1,h2,h3,h4,h5,h6{
+h1,h2,h3,h4,h5,h6, summary{
     font-family: 'Raleway';    
     font-weight: 700;    
 }
 p {
-    @include font($grey);    
+    @include font(grey);    
     @include xs-block() {
         font-size: 0.75rem;
     }
@@ -59,7 +71,7 @@ p {
         }   
     }
     li.slick-active button {
-        background-color: $aqua;
+        background-color: color(aqua);
         width: 33px;
         @include sm-block(){
             width: 45px;
@@ -69,6 +81,21 @@ p {
         }
     }
 }
+
+//Mixin font-awesome
+@mixin fas($unicode) {
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    font-style: normal;
+    content: $unicode;
+}
+@mixin fab($unicode) {
+    font-family: "Font Awesome 5 Brands";
+    font-weight: 400;
+    font-style: normal;
+    content: $unicode;
+}
+
 .button-top {
     @include xs-block() {
         position: fixed;
@@ -81,13 +108,13 @@ p {
         width: 51px;
         height: 51px;
         border-radius: 50%;
-        background: $aqua;
+        background: color(aqua);
         font-size: 1.5rem;
-        color: $white;
+        color: color(white);
         text-decoration: none;
         &:hover {
             text-decoration: none;
-            color: $white;
+            color: color(white);
             cursor: pointer;
         }
     }

@@ -86,16 +86,16 @@
             font-family: 'Raleway';            
             text-decoration: none;
             text-transform: capitalize;
-            color: $grey;
+            color: color(grey);
         }
         &--social {
             @include xs-block() {
                 text-decoration: none;
-                color: $black;
+                color: color(black);
                 margin: 0 7px 0;
                 font-size: 0.75rem;
                 &:hover {
-                    color: $aqua;
+                    color: color(aqua);
                 }                
             }
             @include md-block() {
@@ -111,7 +111,7 @@
     }
     &__input {
         @include xs-block() {
-            color: $grey;
+            color: color(grey);
             font-size: 0.75rem;
             border-radius: 2rem 0 0 2rem;
             padding: 10px 13px;
@@ -127,10 +127,10 @@
         @include xs-block() {
             text-align: center;
             font-size: 1.25rem;
-            color: $white;
+            color: color(white);
             padding: 10px 17px;
             border-radius: 0 2rem 2rem 0;
-            background: $green;
+            background: color(green);
             border: none;
             width: 30%;
             &:hover {
@@ -143,16 +143,16 @@
     }
     &__bottom {
         @include xs-block() {
-            background: $green;
+            background: color(green);
             text-align: center;
             padding: 16px 0;
-            color: $white;
+            color: color(white);
         }
     }
     &__copyright {
         @include xs-block() {
             font-family: 'Poppins', sans-serif;
-            color: $white;
+            color: color(white);
             text-transform: capitalize;
             &--strong {
                 font-weight: 700;
