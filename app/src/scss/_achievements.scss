@@ -12,7 +12,7 @@
        }
     }
     @include md-block() {
-        background-image: url('/img/achievementsBg.jpg');
+        background-image: url('../img/achievementsBg.jpg');
     }
     &__wrapper {
         @include wrapper();

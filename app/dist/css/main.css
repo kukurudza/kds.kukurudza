@@ -784,7 +784,7 @@ p {
 
 @media screen and (min-width: 1024px) {
   .achievements {
-    background-image: url("/img/achievementsBg.jpg"); } }
+    background-image: url("../img/achievementsBg.jpg"); } }
 
 .achievements__wrapper {
   max-width: 1200px;
