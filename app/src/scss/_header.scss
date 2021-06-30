@@ -18,7 +18,7 @@
     &--blog {
         @include xs-block() {
             position: relative;
-            background-image: url('/img/blog/headerBgBlog.jpg');
+            background-image: url('../img/blog/headerBgBlog.jpg');
             background-size: cover;
             color: color(white);
             z-index: 1;

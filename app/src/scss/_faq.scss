@@ -16,7 +16,7 @@
     }
     @include md-block() {
         padding: 66px 0 0;
-        background-image: url('/img/doctors_three.jpg');
+        background-image: url('../img/doctors_three.jpg');
         background-repeat: no-repeat;        
     }
     &__container {
