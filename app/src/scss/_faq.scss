@@ -1,17 +1,33 @@
 .faq {
     @include xs-block() {
-        padding: 96px 0 55px;
+        padding: 96px 0 0; 
+        position: relative;
+        &::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            width: 100%;
+            height: 100%;
+            background-color: transparentize(color(green), 0.2);
+            z-index: 1;
+        }               
     }
-    @include lg-block() {
-        padding: 66px 0 110px;
+    @include md-block() {
+        padding: 66px 0 0;
+        background-image: url('/img/doctors_three.jpg');
+        background-repeat: no-repeat;        
     }
-    &__wrapper {
-        @include wrapper();
+    &__container {
+        @include wrapper(); 
+        position: relative;
+        z-index: 3;       
     }
     &__title {
         @include xs-block() {
             font-size: 1.5rem;
-            color: color(black);
+            color: color(white);
             text-transform: capitalize;
             text-align: center;
         }
@@ -24,14 +40,23 @@
         }
         &--small {
             @include xs-block() {
-                text-transform: capitalize;
+                color: color(white);
                 font-size: 1.125rem;
                 margin: 0 0 16px;
+                list-style: none;
             }
             @include md-block() {
                 font-size: 1.5rem;
                 margin: 0 0 32px;
             }
+        }
+    }
+    &__wrapper {
+        @include xs-block(){
+            display: grid;
+        }
+        @include md-block(){            
+            grid-template: 1fr / 600px 600px;
         }
     }
     &__inner {
@@ -42,12 +67,49 @@
             
         }
     } 
+    &__item {
+        @include xs-block() {
+            @include font(white);
+            margin: 32px 0 0;
+            transition: all 1s;
+            &[open] {
+                .faq__title--small>.faq__icon::before {
+                    color: color(aqua);
+                    transform: rotate(90deg);
+                }
+            }
+        }
+    }
+    &__icon {
+        position: relative;        
+    }
+    &__icon::before {
+        @include xs-block() {  
+            display: inline-block;          
+            @include fas('\f061');
+            transition: all 1s;
+            // transform: rotate(-90deg);            
+        }
+    }
     &__text {
         @include xs-block() {
+            @include font(white);
             margin: 20px 0 0;
         }
         @include md-block() {
             margin: 30px 0 0;
         }
     }    
+    &__list {
+        @include xs-block(){
+            li {
+                margin: 16px 0 0;
+            }
+            li::before {
+                @include fas('\f192');
+                font-size: 0.5rem;
+                padding: 16px;
+            }
+        }
+    }
 }

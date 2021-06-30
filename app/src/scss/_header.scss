@@ -294,7 +294,7 @@
             line-height: 0.95;
             text-transform: uppercase;
             text-decoration: none;
-            @include font(color(white));
+            @include font(white);
             font-weight: 700;
             font-size: 0.7rem;
         }        
