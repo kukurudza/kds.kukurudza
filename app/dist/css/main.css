@@ -370,7 +370,6 @@ p {
         height: 596px;
         z-index: 1;
         transform: rotate(-30deg);
-        -webkit-clip-path: polygon(0 86%, 53.5% 40%, 100% 0, 0 0);
         clip-path: polygon(0 86%, 53.5% 40%, 100% 0, 0 0);
         overflow: hidden; } }
   @media screen and (min-width: 1100px) {
@@ -1023,7 +1022,8 @@ p {
   .faq {
     padding: 66px 0 0;
     background-image: url("../img/doctors_three.jpg");
-    background-repeat: no-repeat; } }
+    background-repeat: no-repeat;
+    object-fit: cover; } }
 
 .faq__container {
   max-width: 1200px;
@@ -1080,7 +1080,9 @@ p {
     transition: all 1s; }
     .faq__item[open] .faq__title--small > .faq__icon::before {
       color: #00cff1;
-      transform: rotate(90deg); } }
+      transform: rotate(90deg); }
+    .faq__item:hover {
+      cursor: pointer; } }
 
 .faq__icon {
   position: relative; }
@@ -1114,6 +1116,15 @@ p {
     content: "";
     font-size: 0.5rem;
     padding: 16px; } }
+
+@media screen and (min-width: 320px) {
+  .faq__img {
+    display: none; } }
+
+@media screen and (min-width: 1024px) {
+  .faq__img {
+    display: block;
+    line-height: 0; } }
 
 @media screen and (min-width: 320px) {
   .blog {
@@ -1151,7 +1162,6 @@ p {
 
 @media screen and (min-width: 320px) {
   .blog__title--small {
-    text-transform: capitalize;
     font-size: 1.125rem; } }
 
 @media screen and (min-width: 1024px) {
@@ -1208,35 +1218,17 @@ p {
     padding: 24px 20px; } }
 
 @media screen and (min-width: 320px) {
-  .blog__details {
-    display: flex;
-    flex-wrap: nowrap;
-    margin: 17px 0 13px;
-    font-family: 'Poppins', sans-serif; } }
-
-@media screen and (min-width: 320px) {
-  .blog__author {
-    text-transform: capitalize; } }
-
-@media screen and (min-width: 320px) {
-  .blog__author--strong {
-    font-weight: 700; } }
-
-@media screen and (min-width: 320px) {
-  .blog__date {
-    margin-left: 6px; } }
-
-.blog__excerpt {
-  text-align: left;
-  line-height: 1.6;
-  margin: 0 0 16px; }
+  .blog__excerpt {
+    text-align: left;
+    line-height: 1.6;
+    margin: 16px 0; } }
 
 @media screen and (min-width: 320px) {
   .blog__more {
     font-family: "Poppins", sans-serif;
     font-weight: 700;
     text-decoration: none;
-    text-transform: capitalize;
+    text-transform: uppercase;
     color: #282828;
     font-size: 0.75rem;
     margin: auto 0; }
@@ -1789,11 +1781,11 @@ p {
 
 @media screen and (min-width: 1024px) {
   .footer__item--small {
-    width: calc(16.66667% - 30px); } }
+    width: calc(33.33333% - 30px); } }
 
 @media screen and (min-width: 1100px) {
   .footer__item--small {
-    width: calc(16.66667% - 30px); } }
+    width: calc(33.33333% - 30px); } }
 
 @media screen and (min-width: 320px) {
   .footer__item--small {
@@ -1802,6 +1794,13 @@ p {
 @media screen and (min-width: 1024px) {
   .footer__item--small {
     display: block; } }
+
+@media screen and (min-width: 320px) {
+  .footer__logo a {
+    color: #282828;
+    text-decoration: none; }
+    .footer__logo a:hover {
+      color: #00cff1; } }
 
 @media screen and (min-width: 320px) {
   .footer__text {
@@ -1825,7 +1824,6 @@ p {
 @media screen and (min-width: 320px) {
   .footer__title--social {
     font-size: 1rem;
-    text-transform: capitalize;
     margin: 0 0 10px; } }
 
 @media screen and (min-width: 1024px) {

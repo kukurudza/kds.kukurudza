@@ -17,7 +17,8 @@
     @include md-block() {
         padding: 66px 0 0;
         background-image: url('../img/doctors_three.jpg');
-        background-repeat: no-repeat;        
+        background-repeat: no-repeat;
+        object-fit: cover;
     }
     &__container {
         @include wrapper(); 
@@ -78,6 +79,9 @@
                     transform: rotate(90deg);
                 }
             }
+            &:hover {
+                cursor: pointer;
+            }
         }
     }
     &__icon {
@@ -87,8 +91,7 @@
         @include xs-block() {  
             display: inline-block;          
             @include fas('\f061');
-            transition: all 1s;
-            // transform: rotate(-90deg);            
+            transition: all 1s;            
         }
     }
     &__text {
@@ -110,6 +113,15 @@
                 font-size: 0.5rem;
                 padding: 16px;
             }
+        }
+    }
+    &__img {
+        @include xs-block() {
+            display: none;
+        }
+        @include md-block() {
+            display: block;
+            line-height: 0;
         }
     }
 }

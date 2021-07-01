@@ -31,13 +31,24 @@
             margin: 0;
         }
         &--small {            
-            @include size-md(2);
-            @include size-lg(2);
+            @include size-md(4);
+            @include size-lg(4);
             @include xs-block() {
                 display: none;
             }
             @include md-block() {
                 display: block;
+            }
+        }
+    }
+    &__logo {
+        @include xs-block() {
+            a {
+                color: color(black);
+                text-decoration: none;
+                &:hover {
+                    color: color(aqua);
+                }
             }
         }
     }
@@ -61,8 +72,7 @@
         }
         &--social {
             @include xs-block() {
-                font-size: 1rem;
-                text-transform: capitalize;
+                font-size: 1rem;                
                 margin: 0 0 10px;
             }
             @include md-block() {
