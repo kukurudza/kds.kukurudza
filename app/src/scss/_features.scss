@@ -20,7 +20,7 @@
         &--phone {
             @include xs-block() {
                 &:nth-child(1) {
-                    max-width: 184px;                    
+                    max-width: 192px;                    
                     position: absolute;
                     right: 16px;
                     bottom: 30px;
@@ -28,7 +28,7 @@
                 }
                 &:nth-child(2) {
                     position: absolute;                   
-                    max-width: 159px;//70
+                    max-width: 192px;//159
                     right: 82px;
                     bottom: 30px;
                 }
@@ -36,36 +36,36 @@
             @include sm-block() {
                 &:nth-child(1) {
                     right: 150px;
-                    max-width: 243px;
+                    max-width: 192px;
                     bottom: 0;
                 }
                 &:nth-child(2) {
-                    max-width: 209px;
-                    right: 320px;
+                    max-width: 294px;
+                    right: 250px;
                     bottom: 0;
                 }
             }
             @include md-block() {
                 &:nth-child(1){
                     right: 50px;
-                    max-width: 258px;
+                    max-width: 308px;
                     bottom: 0;
                 }                
                 &:nth-child(2){
-                    max-width: 225px;
-                    right: 226px;
+                    max-width: 186px;
+                    left: 4px;
                     bottom: 0;
                 }                
             }
             @include lg-block() {
                 &:nth-child(1) {
                     right: 120px;
-                    max-width: 304px;
+                    max-width: 368px;
                     bottom: -85px;
                 }
                 &:nth-child(2) {
-                    max-width: 265px;
-                    right: 327px;
+                    max-width: 208px;
+                    left: -80px;
                     bottom: -85px;
                 }
             }

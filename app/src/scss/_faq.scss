@@ -1,6 +1,6 @@
 .faq {
     @include xs-block() {
-        padding: 96px 0 0; 
+        padding: 36px 0 16px; 
         position: relative;
         &::after {
             content: '';
@@ -57,6 +57,9 @@
             display: grid;
         }
         @include md-block(){            
+            grid-template: 1fr / 1fr 1fr;
+        }
+        @include lg-block() {
             grid-template: 1fr / 600px 600px;
         }
     }
