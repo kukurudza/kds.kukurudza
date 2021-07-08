@@ -15,27 +15,27 @@
         background-color: transparentize(color(violet), 0.3);
         z-index: 1;
     }
-    &--blog {
-        @include xs-block() {
-            position: relative;
-            background-image: url('../img/blog/headerBgBlog.jpg');
-            background-size: cover;
-            color: color(white);
-            z-index: 1;
-            padding: 57px 0;
-            &::after {
-                content: '';
-                position: absolute;
-                top: 0;
-                left: 0;
-                right: 0;
-                width: 100%;
-                height: 100%;
-                background-color: transparentize(color(green), 0.3);
-                z-index: 1;
-            }
-        }
-    }
+    // &--blog {
+    //     @include xs-block() {
+    //         position: relative;
+    //         background-image: url('../img/blog/headerBgBlog.jpg');
+    //         background-size: cover;
+    //         color: color(white);
+    //         z-index: 1;
+    //         padding: 57px 0;
+    //         &::after {
+    //             content: '';
+    //             position: absolute;
+    //             top: 0;
+    //             left: 0;
+    //             right: 0;
+    //             width: 100%;
+    //             height: 100%;
+    //             background-color: transparentize(color(green), 0.3);
+    //             z-index: 1;
+    //         }
+    //     }
+    // }
     &__wrapper {
         @include wrapper();        
         position: relative;
@@ -49,7 +49,7 @@
             align-items: center;
         }
         @include md-block() {
-            grid-template-columns: 25% 75%;
+            grid-template-columns: 20% 80%;
         }       
     }
     &__logo {
@@ -58,7 +58,7 @@
         // @include size-md(4);
         // @include size-lg(4);
         color: color(white);
-        font-size: 1.5rem;
+        font-size: 1.25rem;
         a {
             color: inherit;
             text-decoration: none;
@@ -105,7 +105,7 @@
             left: 0;
             display: grid;
             grid-template-rows: 1fr;
-            grid-template-columns: repeat(6, 2fr) 2fr;
+            grid-template-columns: repeat(4, 2fr) 2fr;
             grid-gap: 15px;
             justify-content: center;
             align-items: center;

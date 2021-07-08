@@ -3,16 +3,8 @@ body, div, dl, dt, dd, ul, li, h1, h2, h3, h4, h5, h6, pre, code, form, fieldset
   margin: 0;
   padding: 0; }
 
-table {
-  border-collapse: collapse;
-  border-spacing: 0; }
-
 fieldset, img, abbr {
   border: 0; }
-
-address, caption, cite, code, dfn, em, strong, th, var {
-  font-style: normal;
-  font-weight: normal; }
 
 ul li {
   list-style: none; }
@@ -30,9 +22,6 @@ input, textarea, select {
   font-family: inherit;
   font-size: inherit;
   font-weight: inherit; }
-
-legend {
-  color: #000; }
 
 article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section, main {
   display: block; }
@@ -100,24 +89,6 @@ p {
     height: 100%;
     background-color: rgba(53, 32, 59, 0.7);
     z-index: 1; }
-  @media screen and (min-width: 320px) {
-    .header--blog {
-      position: relative;
-      background-image: url("../img/blog/headerBgBlog.jpg");
-      background-size: cover;
-      color: #fefefe;
-      z-index: 1;
-      padding: 57px 0; }
-      .header--blog::after {
-        content: '';
-        position: absolute;
-        top: 0;
-        left: 0;
-        right: 0;
-        width: 100%;
-        height: 100%;
-        background-color: rgba(36, 198, 87, 0.7);
-        z-index: 1; } }
   .header__wrapper {
     max-width: 1200px;
     margin: 0 auto;
@@ -137,10 +108,10 @@ p {
       align-items: center; } }
   @media screen and (min-width: 1024px) {
     .header__inner {
-      grid-template-columns: 25% 75%; } }
+      grid-template-columns: 20% 80%; } }
   .header__logo {
     color: #fefefe;
-    font-size: 1.5rem; }
+    font-size: 1.25rem; }
     .header__logo a {
       color: inherit;
       text-decoration: none; }
@@ -177,7 +148,7 @@ p {
       left: 0;
       display: grid;
       grid-template-rows: 1fr;
-      grid-template-columns: repeat(6, 2fr) 2fr;
+      grid-template-columns: repeat(4, 2fr) 2fr;
       grid-gap: 15px;
       justify-content: center;
       align-items: center;
@@ -532,61 +503,17 @@ p {
       padding-left: 15px;
       padding-right: 15px; } }
 
-@media screen and (min-width: 320px) {
-  .features__img {
-    width: calc(100% - 30px); } }
-
 @media screen and (min-width: 1024px) {
-  .features__img {
-    width: calc(50% - 30px); } }
+  .features__wrapper {
+    flex-wrap: nowrap; } }
 
 @media screen and (min-width: 320px) {
   .features__img {
-    position: relative;
-    height: 460px; } }
-
-@media screen and (min-width: 320px) {
-  .features__img--phone:nth-child(1) {
-    max-width: 192px;
-    position: absolute;
-    right: 16px;
-    bottom: 30px;
-    z-index: 2; }
-  .features__img--phone:nth-child(2) {
-    position: absolute;
-    max-width: 192px;
-    right: 82px;
-    bottom: 30px; } }
-
-@media screen and (min-width: 768px) {
-  .features__img--phone:nth-child(1) {
-    right: 150px;
-    max-width: 192px;
-    bottom: 0; }
-  .features__img--phone:nth-child(2) {
-    max-width: 294px;
-    right: 250px;
-    bottom: 0; } }
-
-@media screen and (min-width: 1024px) {
-  .features__img--phone:nth-child(1) {
-    right: 50px;
-    max-width: 308px;
-    bottom: 0; }
-  .features__img--phone:nth-child(2) {
-    max-width: 186px;
-    left: 4px;
-    bottom: 0; } }
+    position: relative; } }
 
 @media screen and (min-width: 1100px) {
-  .features__img--phone:nth-child(1) {
-    right: 120px;
-    max-width: 368px;
-    bottom: -85px; }
-  .features__img--phone:nth-child(2) {
-    max-width: 208px;
-    left: -80px;
-    bottom: -85px; } }
+  .features__img--device {
+    width: 648px; } }
 
 @media screen and (min-width: 320px) {
   .features__subject {
@@ -817,7 +744,6 @@ p {
 
 @media screen and (min-width: 320px) {
   .achievements__item {
-    position: relative;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -825,19 +751,8 @@ p {
     text-align: center;
     color: #fefefe;
     margin: 90px 0; }
-    .achievements__item::before {
-      content: '';
-      position: absolute;
-      width: 135px;
-      height: 160%;
-      border: 1px dashed #fefefe;
-      border-radius: 10px; }
     .achievements__item:nth-child(1)::after {
       display: none; } }
-
-@media screen and (min-width: 1024px) {
-  .achievements__item::before {
-    width: 172px; } }
 
 @media screen and (min-width: 320px) {
   .achievements__icon {
@@ -1511,7 +1426,8 @@ p {
 
 @media screen and (min-width: 1024px) {
   .single {
-    margin: 80px 0 0; } }
+    margin: 80px 0 0;
+    padding: 0 0 0 20px; } }
 
 .single__img {
   background-size: cover; }

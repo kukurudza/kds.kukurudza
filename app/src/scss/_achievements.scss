@@ -29,36 +29,20 @@
         @include size-xs(12);
         @include size-sm(6);
         @include size-md(3);
-        @include xs-block() {
-            position: relative;
+        @include xs-block() {            
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
             text-align: center;
             color: color(white);
-            margin: 90px 0;
-            &::before {
-                content: '';
-                position: absolute;
-                width: 135px;
-                height: 160%;
-                border: 1px dashed color(white);
-                border-radius: 10px;
-                // transform: rotate(-36deg);
-            }            
+            margin: 90px 0;                
             &:nth-child(1) {
                 &::after {
                     display: none;
                 }
             }
-        }        
-        @include md-block() {
-            &::before {                
-                width: 172px;                
-                // transform: rotate(-30deg);
-            }
-        }        
+        }             
     }
     &__icon {
         @include xs-block() {
