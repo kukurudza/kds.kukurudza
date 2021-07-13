@@ -9,46 +9,36 @@
 
     &__inner {
         @include xs-block() {
-
-            display: flex;
-            justify-content: center;
-        }
-
-        @include md-block() {
-            @include wrapper();
-        }
+            @include wrapper();            
+        }       
     }
 
-    &__content {
-        @include size-xs(12);
-        @include size-sm(12);
-        @include size-md(8);
-        @include size-lg(8);
+    &__content {        
+        display: grid;        
 
         @include xs-block() {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            align-items: center;
-            margin: 0;
+            // display: flex;
+            // flex-wrap: wrap;
+            // justify-content: center;
+            // align-items: center;
+            // margin: 0;
         }
 
         @include md-block() {
+            grid-template: 1fr / repeat(3, 4fr);
             margin: 0 auto;
-            justify-content: flex-start;
-            align-items: flex-start;
+            justify-content: center;           
         }
     }
 
     &__post {
         @include size-xs(12);
         @include size-sm(12);
-        @include size-md(12);
-        @include size-lg(6);
+        @include size-md(12);        
 
         @include xs-block() {
             max-width: 486px;
-            margin: 80px 0 0;
+            margin: 80px auto 0;
             box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0.2);
 
             &:hover {
@@ -59,23 +49,17 @@
                     color: color(aqua);
                 }
             }
-        }
-
-        @include md-block() {
-            margin: 80px 15px 0;
-
-            &:nth-child(odd) {
-                margin-left: 0;
-            }
-
-            &:nth-child(even) {
-                margin-right: 0;
-            }
-        }
+        }        
     }
 
     &__img {
         background-size: cover;
+        @include xs-block() {
+            width: 270px;            
+        }
+        @include md-block() {
+            width: 370px;            
+        }
     }
 
     &__text {
@@ -88,8 +72,7 @@
     &__title {
         @include xs-block() {
             font-size: 1.25rem;
-            color: color(black);
-            text-transform: capitalize;
+            color: color(black);            
         }
 
         @include md-block() {
@@ -118,13 +101,10 @@
             }
         }
     }
-
-    // &__date {
-
-    // }
+    
     &__excerpt {
         @include xs-block() {
-            margin: 0 0 16px;
+            margin: 16px 0;
             line-height: 1.6;
             text-align: left;
         }
@@ -133,7 +113,7 @@
     &__more {
         @include xs-block() {
             font-weight: 700;
-            text-transform: capitalize;
+            text-transform: uppercase;
             color: color(grey);
             text-decoration: none;
             margin: auto 0;
@@ -145,135 +125,135 @@
     }
 }
 
-.sidebar {
-    @include size-md(4);
-    @include size-lg(4);
+// .sidebar {
+//     @include size-md(4);
+//     @include size-lg(4);
 
-    @include xs-block() {
-        display: none;
-    }
+//     @include xs-block() {
+//         display: none;
+//     }
 
-    @include md-block() {
-        display: block;
-        position: sticky;
-        height: 100vh;
-        overflow-y: scroll;
-        top: 0;
-        margin: 80px 0 0;
-        padding-right: 80px;
-    }
+//     @include md-block() {
+//         display: block;
+//         position: sticky;
+//         height: 100vh;
+//         overflow-y: scroll;
+//         top: 0;
+//         margin: 80px 0 0;
+//         padding-right: 80px;
+//     }
 
-    &__form {
-        display: flex;
-        margin: 0 0 78px;
-    }
+//     &__form {
+//         display: flex;
+//         margin: 0 0 78px;
+//     }
 
-    &__input {
-        @include md-block() {
-            width: 80%;
-            height: 50px;
-            border-radius: 5px 0 0 5px;
-            border: solid 1px #d0d0d0;
-            background-color: #d0d0d0;
-            font-family: "Poppins", sans-serif;
-            padding: 0 16px;
-            color: color(grey);
-        }
+//     &__input {
+//         @include md-block() {
+//             width: 80%;
+//             height: 50px;
+//             border-radius: 5px 0 0 5px;
+//             border: solid 1px #d0d0d0;
+//             background-color: #d0d0d0;
+//             font-family: "Poppins", sans-serif;
+//             padding: 0 16px;
+//             color: color(grey);
+//         }
 
-        @include lg-block() {
-            height: 55px;
-        }
-    }
+//         @include lg-block() {
+//             height: 55px;
+//         }
+//     }
 
-    &__submit {
-        @include md-block() {
-            width: 20%;
-            height: 52px;
-            background-color: color(green);
-            border: none;
-            border-radius: 0 5px 5px 0;
-            font-size: 1rem;
-            color: color(white);
+//     &__submit {
+//         @include md-block() {
+//             width: 20%;
+//             height: 52px;
+//             background-color: color(green);
+//             border: none;
+//             border-radius: 0 5px 5px 0;
+//             font-size: 1rem;
+//             color: color(white);
 
-            &:hover {
-                cursor: pointer;
-            }
+//             &:hover {
+//                 cursor: pointer;
+//             }
 
-            @include lg-block() {
-                height: 57px;
-            }
-        }
+//             @include lg-block() {
+//                 height: 57px;
+//             }
+//         }
 
-    }
+//     }
 
-    &__title {
-        color: #474747;
-        text-transform: capitalize;
-        font-size: 1.5rem;
-        margin: 0 0 32px;
-    }
+//     &__title {
+//         color: #474747;
+//         text-transform: capitalize;
+//         font-size: 1.5rem;
+//         margin: 0 0 32px;
+//     }
 
-    &__list-item {
-        margin: 26px 0 0;
+//     &__list-item {
+//         margin: 26px 0 0;
 
-        &:first-child {
-            margin-top: 0;
-        }
-    }
+//         &:first-child {
+//             margin-top: 0;
+//         }
+//     }
 
-    &__link {
-        font-family: "Poppins", sans-serif;
-        color: color(grey);
-        text-decoration: none;
-        text-transform: capitalize;
+//     &__link {
+//         font-family: "Poppins", sans-serif;
+//         color: color(grey);
+//         text-decoration: none;
+//         text-transform: capitalize;
 
-        &:hover {
-            color: color(green);
-        }
-    }
+//         &:hover {
+//             color: color(green);
+//         }
+//     }
 
-    &__recent-post {
-        margin: 75px 0 80px;
-    }
+//     &__recent-post {
+//         margin: 75px 0 80px;
+//     }
 
-    &__post {
-        display: flex;
-        justify-content: flex-start;
-        margin: 15px 0;
+//     &__post {
+//         display: flex;
+//         justify-content: flex-start;
+//         margin: 15px 0;
 
-    }
+//     }
 
-    &__subtitle {
-        margin-left: 30px;
-        line-height: 30px;
+//     &__subtitle {
+//         margin-left: 30px;
+//         line-height: 30px;
 
-        a {
-            font-family: "Poppins", sans-serif;
-            font-weight: 700;
-            text-decoration: none;
-            color: #474747;
-        }
-    }
+//         a {
+//             font-family: "Poppins", sans-serif;
+//             font-weight: 700;
+//             text-decoration: none;
+//             color: #474747;
+//         }
+//     }
 
-    &__tags {
-        max-width: 315px;
-    }
+//     &__tags {
+//         max-width: 315px;
+//     }
 
-    &__tag {
-        margin: 5px 10px 0 0;
-        padding: 4px 15px;
-        border: 1px solid #d0d0d0;
-        font-family: "Poppins", sans-serif;
-        text-decoration: none;
-        line-height: 2.7;
-        color: #474747;
+//     &__tag {
+//         margin: 5px 10px 0 0;
+//         padding: 4px 15px;
+//         border: 1px solid #d0d0d0;
+//         font-family: "Poppins", sans-serif;
+//         text-decoration: none;
+//         line-height: 2.7;
+//         color: #474747;
 
-        &:hover {
-            background-color: color(green);
-            color: color(white);
-        }
-    }
-}
+//         &:hover {
+//             background-color: color(green);
+//             color: color(white);
+//         }
+//     }
+// }
 
 // @include xs-block() {}
 // @include sm-block() {}

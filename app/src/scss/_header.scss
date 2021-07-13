@@ -302,19 +302,7 @@
                 font-size: 1rem; 
             }
                     
-    }
-    &__img {
-        // @include size-md(5);
-        // @include size-lg(6);
-        @include xs-block() {
-            display: none;
-        }
-        @include md-block() {
-            display: block;
-            position: relative;
-            height: 622px;
-        }
-    }
+    }    
     &__phone {
         @include md-block() {
             position: absolute;
