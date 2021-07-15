@@ -333,6 +333,7 @@ p {
         height: 596px;
         z-index: 1;
         transform: rotate(-30deg);
+        -webkit-clip-path: polygon(0 86%, 53.5% 40%, 100% 0, 0 0);
         clip-path: polygon(0 86%, 53.5% 40%, 100% 0, 0 0);
         overflow: hidden; } }
   @media screen and (min-width: 1100px) {
@@ -930,6 +931,7 @@ p {
     padding: 66px 0 0;
     background-image: url("../img/doctors_three.jpg");
     background-repeat: no-repeat;
+    -o-object-fit: cover;
     object-fit: cover; } }
 
 .faq__container {
