@@ -18,7 +18,8 @@
         padding: 66px 0 0;
         background-image: url('../img/doctors_three.jpg');
         background-repeat: no-repeat;
-        object-fit: cover;
+        background-size: cover;
+        transition: background-size 1s;
     }
     &__container {
         @include wrapper(); 

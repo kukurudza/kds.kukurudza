@@ -91,11 +91,15 @@
             }
         }
     }
-    &__link {        
+    &__link { 
+        @include xs-block() {
+            &:hover {
+                color: color(aqua);
+            }
+        }
         @include md-block() {
             font-family: 'Raleway';            
-            text-decoration: none;
-            text-transform: capitalize;
+            text-decoration: none;            
             color: color(grey);
         }
         &--social {
@@ -159,11 +163,16 @@
             color: color(white);
         }
     }
-    &__copyright {
+    &__cellphone {
         @include xs-block() {
             font-family: 'Poppins', sans-serif;
             color: color(white);
             text-transform: capitalize;
+            text-decoration: none;
+            &:hover {
+                color: color(aqua);
+                cursor: pointer;
+            }
             &--strong {
                 font-weight: 700;
             }

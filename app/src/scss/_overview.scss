@@ -45,15 +45,15 @@
     }
     &__icon {
         @include xs-block() {
-            width: 122px;
-            height: 122px;        
+            width: 98px;
+            height: 98px;        
             border-radius: 50%;
             position: relative;        
             display: flex;
             align-items: center;
             justify-content: center;
             margin: 0 auto;
-            font-size: 4rem;
+            font-size: 3rem;
             color: color(white);
             &::before {
                 content: '';

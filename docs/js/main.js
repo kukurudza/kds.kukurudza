@@ -1,13 +1,14 @@
 $(document).ready(function() { 
-    // -------------------------------- NAV WITH BURGER -------------------
-    $('burger').click(function(e){
-      $('.header__menu').slideToggle(700);
-  }) 
-    $(".burger").click(function() {      
-        $(".burger").toggleClass("active");
-        $(".header__menu").toggleClass("active");
-    });  
+  // -------------------------------- NAV WITH BURGER -------------------
+  $('burger').click(function(e){
+    $('.header__menu').slideToggle(700);
+}) 
+  $(".burger").click(function() {      
+      $(".burger").toggleClass("active");
+      $(".header__menu").toggleClass("active");
+      $(".header__inner").toggleClass("active");
   });  
+});  
 //---------------------------------SLIDER'S----------------------------
 (function($){
   $('.screenshot__slider').slick({

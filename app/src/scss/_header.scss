@@ -14,28 +14,7 @@
         height: 100%;
         background-color: transparentize(color(violet), 0.3);
         z-index: 1;
-    }
-    // &--blog {
-    //     @include xs-block() {
-    //         position: relative;
-    //         background-image: url('../img/blog/headerBgBlog.jpg');
-    //         background-size: cover;
-    //         color: color(white);
-    //         z-index: 1;
-    //         padding: 57px 0;
-    //         &::after {
-    //             content: '';
-    //             position: absolute;
-    //             top: 0;
-    //             left: 0;
-    //             right: 0;
-    //             width: 100%;
-    //             height: 100%;
-    //             background-color: transparentize(color(green), 0.3);
-    //             z-index: 1;
-    //         }
-    //     }
-    // }
+    }    
     &__wrapper {
         @include wrapper();        
         position: relative;
@@ -45,55 +24,65 @@
         @include xs-block() {
             display: grid;
             grid-template-rows: 1fr;
-            grid-template-columns: 33% 33% 33%;
-            align-items: center;
+            grid-template-columns: 70% 30%;
+            &.active {
+                position: fixed;
+                top: 0;
+                right: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                padding: 32px 0 0;
+                grid-template-rows: 60px 1fr;
+                grid-template-columns: 50% 50%;        
+                background-color: color(white);        
+              }
         }
         @include md-block() {
             grid-template-columns: 20% 80%;
         }       
     }
-    &__logo {
-        // @include size-xs(6);
-        // @include size-sm(6);
-        // @include size-md(4);
-        // @include size-lg(4);
+    &__logo { 
+    @include xs-block() {
         color: color(white);
         font-size: 1.25rem;
+        margin: auto 0;        
         a {
             color: inherit;
-            text-decoration: none;
+            text-decoration: none;            
         }
         h1 {
             font-size: inherit;
         }
-    }
+    }     
+}
     &__nav {
-        // @include size-xs(6);
-        // @include size-sm(6);
-        // @include size-md(8);
-        // @include size-lg(8);
-        justify-self: end;
+        @include xs-block() {
+            justify-self: center;
+            grid-row: 2 / 3;
+            grid-column: 1 / 4;
+        }
+        @include md-block() {
+            justify-self: end;
+            grid-row: 1 / 2;
+            grid-column: 2 / 4;
+        }
+        
     }
     &__menu {
         @include xs-block() {        
-        position: absolute;
-        display: none;
-        top: 50px;
-        right: 0;
-        left: 0;            
-        z-index: 1000;
-        transition: ease-in 0.3s;
-        overflow: auto;        
-        background-color: transparentize(color(white), 0.55);
-        padding: 15px 0;
-        &.active {
-            display: flex;
+            display: none;
             justify-content: center;
-            .header__button {
-                display: none;
+            z-index: 1000;
+            transition: ease-in 0.3s;        
+            padding: 15px 0;
+            &.active {
+                display: grid;                
+                .header__button {
+                    display: none;
+                    }
                 }
             }
-        }
         @include sm-block() {
             top: 15.5%;
             margin: 0 auto;
@@ -117,8 +106,7 @@
     }
     &__item {
         @include xs-block() {
-            margin: 0 auto;
-            border-right: 1px solid color(grey);            
+            margin: 0 auto;           
         }
         @include md-block() {
             margin: 0;
@@ -130,10 +118,12 @@
         @include xs-block() {
             @include font(black);
             text-align: center;
-            font-size: 0.75rem;
+            font-size: 1.5rem;
             text-decoration: none;            
             margin-right: 10px;
-            
+            &:hover {
+                color: color(aqua);
+              } 
         }
         @include md-block() {            
             color: color(white);
@@ -144,15 +134,7 @@
         @include xs-block() {
             display: none;
         }
-        @include md-block() {
-            a {
-                @include font(white);                
-                text-decoration: none;
-            }
-            &:hover {
-                cursor: pointer;
-                background: color(green);
-            }
+        @include md-block() {                        
             display: block;
             border: 1px solid color(white);
             border-radius: 32px;
@@ -161,8 +143,7 @@
             text-transform: uppercase;
             width: 170px;
             max-height: 60px;
-            background: transparent;
-            
+            background: transparent;            
             white-space: nowrap;
             line-height: 0.75rem;
             font-size: 0.75rem;
@@ -170,6 +151,11 @@
             margin-left: 60px;
             &:hover {
                 cursor: pointer;
+                background: color(green);
+            }
+            a {
+                @include font(white);                
+                text-decoration: none;
             }
         }
     }
@@ -303,35 +289,6 @@
             }
                     
     }    
-    &__phone {
-        @include md-block() {
-            position: absolute;
-            right: 0;
-            bottom: 0;
-            width: 300px;
-            height: 100%;
-            z-index: 2;
-            &:nth-child(2) {
-                right: 35.3%;
-                bottom: 1%;
-                width: 283px;
-                height: 596px;
-                z-index: 1;
-                transform: rotate(-30deg);            
-                clip-path: polygon(0 86%, 53.5% 40%, 100% 0, 0 0);
-                overflow: hidden;
-            }
-        }
-        @include lg-block() {
-            width: 313px;
-
-            &:nth-child(2) {
-                width: 286px;
-                right: 25.3%;
-                transform: rotate(-29deg);
-            }
-        }
-    }
 }
 .burger {
     @include xs-block() {
@@ -341,9 +298,9 @@
     position: relative;
     cursor: pointer;
     background-color: transparent;
-    border: 1px solid color(white);
+    border: 1px solid color(aqua);
     border-radius: 10px;
-    justify-self: flex-end;
+    justify-self: center;
 
     &.active {
         display: inline-block;
@@ -367,7 +324,7 @@
         width: 50%;
         opacity: 1;
         left: 12px;
-        background: color(white);
+        background: color(aqua);
         transform: rotate(0deg);
         transition: 0.25s ease-in-out;
         border-radius: 9px;
