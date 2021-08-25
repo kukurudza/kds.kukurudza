@@ -1,0 +1,65 @@
+.error {
+    width: 100vw;
+    height: 100vh;
+    margin: auto;
+    display: grid;
+    justify-content: center;        
+    align-items: center;
+    background: url('../img/light-sky1.jpg') no-repeat;
+    background-size: cover;
+    position: relative;
+    &::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        width: 100%;
+        height: 100%;
+        background-color: transparentize(color(violet), 0.3);
+        z-index: 1;
+    }
+    &__wrapper{                
+        display: grid;
+        z-index: 100;        
+    }
+    &__title {
+        @extend .header__title;
+        text-align: center;
+        &--blue {
+            @extend .header__title--blue;
+        }
+        &--thin {
+            @extend .header__title--thin;
+        }
+    }
+    &__subtitle {
+        @extend .header__subtitle;
+    }
+    &__button {
+        background: none;
+        border: 1px solid color(white);
+        border-radius: 10px;
+        color: color(white);        
+        justify-self: center;
+        max-width: 190px;
+        max-height: 90px;
+        padding: 15px;
+        &:hover {
+            background: color(green);
+        }
+    }
+    &__link {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-decoration: none;
+        color: inherit;
+        text-transform: uppercase;
+    }
+    &__icon::before {
+        font-size: 1.5rem;
+        @include fas('\f015');
+        padding: 0 7px 0 0;
+    }
+}
