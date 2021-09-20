@@ -23,6 +23,7 @@
     &__inner {
         @include xs-block() {
             display: grid;
+            align-items: center;
             grid-template-rows: 1fr;
             grid-template-columns: 70% 30%;
             &.active {
@@ -46,7 +47,10 @@
     @include xs-block() {
         color: color(white);
         font-size: 1.25rem;
-        margin: auto 0;        
+        margin: auto 0;
+        &:hover .header__logo--white {
+            fill: color(aqua);
+        }        
         a {
             color: inherit;
             text-decoration: none;            
@@ -54,7 +58,20 @@
         h1 {
             font-size: inherit;
         }
-    }     
+        &--white {
+            fill:#fff;
+        }
+        &--icon {
+            width: 180px;
+            height: 60px;
+        }
+    }
+    @include sm-block() {
+        &--icon {
+            width: 230px;
+            height: 65px;
+        }        
+    }
 }
     &__nav {
         @include xs-block() {

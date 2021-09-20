@@ -1,4 +1,14 @@
 @charset "UTF-8";
+/*
+Theme Name:         CPMSD 2
+Theme URI:          https://kukurudza.site
+Description:        Official website of CPMSD #2
+Version:            1.0.0
+Author:             kds
+Author URI:         http://kukurudza.site
+
+License:            GPL
+*/
 body, div, dl, dt, dd, ul, li, h1, h2, h3, h4, h5, h6, pre, code, form, fieldset, input, textarea, p, blockquote, th, td {
   margin: 0;
   padding: 0; }
@@ -103,6 +113,7 @@ p {
   @media screen and (min-width: 320px) {
     .header__inner {
       display: grid;
+      align-items: center;
       grid-template-rows: 1fr;
       grid-template-columns: 70% 30%; }
       .header__inner.active {
@@ -124,11 +135,22 @@ p {
       color: #fefefe;
       font-size: 1.25rem;
       margin: auto 0; }
+      .header__logo:hover .header__logo--white {
+        fill: #00cff1; }
       .header__logo a {
         color: inherit;
         text-decoration: none; }
       .header__logo h1 {
-        font-size: inherit; } }
+        font-size: inherit; }
+      .header__logo--white {
+        fill: #fff; }
+      .header__logo--icon {
+        width: 180px;
+        height: 60px; } }
+  @media screen and (min-width: 768px) {
+    .header__logo--icon {
+      width: 230px;
+      height: 65px; } }
   @media screen and (min-width: 320px) {
     .header__nav {
       justify-self: center;
@@ -1485,11 +1507,13 @@ p {
     display: block; } }
 
 @media screen and (min-width: 320px) {
-  .footer__logo a {
+  .footer__logo {
     color: #282828;
     text-decoration: none; }
-    .footer__logo a:hover {
-      color: #00cff1; } }
+    .footer__logo:hover .footer__logo--black {
+      fill: #00cff1; }
+    .footer__logo--black {
+      fill: #282828; } }
 
 @media screen and (min-width: 320px) {
   .footer__text {
